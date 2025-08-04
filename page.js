@@ -17,8 +17,10 @@ module.exports = {
         return url === "/admin/rapid-situation-sharing" || url === "/admin/rapid-situation-sharing/receive" || url === "/admin/rapid-situation-sharing/send" || url === "/admin/shared-aclgroup";
     },
     async handler (req, res) {
-        const url = req.path;
+        let url = req.path;
         
+        if(url.startsWith('/internal/')) url = url.slice('/internal'.length);
+
         res.setHeader("content-security-policy", "script-src 'self' 'unsafe-inline' https://unpkg.com;")
 
         const commonHTML = `
