@@ -46,7 +46,8 @@ ws.onopen = () => {
 
 ws.onerror = (err) => {
 	console.error("군소위키 정보 공유 시스템 연결에 실패했습니다.");
-    console.error(err);
+    console.error(err.message);
+    console.error(err.stack !== undefined ? err.stack : "");
 };
 
 ws.onmessage = async (event) => {
