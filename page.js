@@ -102,7 +102,7 @@ module.exports = {
 
             return await res.renderSkin("군소위키 고속상황전파체계", {
                 contentHtml: commonHTML + `
-                <div>타 위키에서 전파된 상황의 확인을 위해서는 수신을, 긴급하게 상황 전파가 필요한 경우 발신을 선택하시기 바랍니다. Radio 121.5 MHz로도 접근 가능합니다.</div>
+                <div>타 위키에서 전파된 상황의 확인을 위해서는 수신을, 긴급하게 상황 전파가 필요한 경우 발신을 선택하시기 바랍니다.</div>
                 <a href="/admin/rapid-situation-sharing/receive"><button>수신</button></a> 
                 <a href="/admin/rapid-situation-sharing/send"><button>발신</button></a>
                 `
